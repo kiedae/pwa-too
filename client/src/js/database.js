@@ -21,7 +21,7 @@ export const putDb = async (content) => {
     const store = tx.objectStore('jate');  
     const request = store.put({ value: content }); 
     await tx.done;
-    console.log('Data saved to the database', content);
+    console.log('Data has been added to the database', content);
     return content;
   } catch (error) {
     console.error('Error putting data to the database', error);
